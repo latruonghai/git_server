@@ -11,7 +11,7 @@ class TestCap(unittest.TestCase):
 	def test_multiplt_words(self):
 		text = 'monty python'
 		result = cap.cap_text(text)
-		
+		hello
 
 
 #Test Case in Unittest
