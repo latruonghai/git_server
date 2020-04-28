@@ -1,16 +1,16 @@
-s = input()
+n = int(input())
 
-def timeConverstion(s):
-    a = s.rstrip().split(':')
-    temp = int(a[0])
-    temp1 = a[len(a)-1][2:4]
-    if (temp1.upper()=="PM" and temp<12):
-        if temp<12:
-            temp+=12
-            a[0]=str(temp)
-    elif (temp1.upper()=="AM" and temp==12):
-        a[0]="00"
-    a[len(a)-1]=a[len(a)-1].replace(temp1,"")
-    return ":".join(a)
-print(timeConverstion(s))
-    
+i_startJ_start = input().split()
+
+i_start = int(i_startJ_start[0])
+
+j_start = int(i_startJ_start[1])
+
+i_end = int(i_startJ_start[2])
+
+j_end = int(i_startJ_start[3])
+d = {'UL':(2,-1),'UR':(2,1),'R':(0,2),'LR':(-2,1),'LL':(-2,-1),'L':(0,-2)}
+def printShortestPath(n, i_start, j_start, i_end, j_end):
+    if i_start<i_end or j_start<j_end:
+        while(i_start<i_end or j_start<j_end):
+            
