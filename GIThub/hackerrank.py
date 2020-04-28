@@ -1,17 +1,16 @@
-ar_count = int(input())
+s = input()
 
-ar = list(map(int, input().rstrip().split()))
-
-def birthdayCakeCandle(arr):
-    max = arr[0]
-    dem =1
-    for i in range(1,len(arr)):
-        if arr[i]==max:
-            dem +=1
-        elif arr[i]>max:
-            dem=1
-            max = arr[i]
-    return dem
-print(birthdayCakeCandle(ar))    
-        
+def timeConverstion(s):
+    a = s.rstrip().split(':')
+    temp = int(a[0])
+    temp1 = a[len(a)-1][2:4]
+    if (temp1.upper()=="PM" and temp<12):
+        if temp<12:
+            temp+=12
+            a[0]=str(temp)
+    elif (temp1.upper()=="AM" and temp==12):
+        a[0]="00"
+    a[len(a)-1]=a[len(a)-1].replace(temp1,"")
+    return ":".join(a)
+print(timeConverstion(s))
     
