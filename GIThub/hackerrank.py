@@ -46,9 +46,9 @@ def printShortestPath(n, i_start, j_start, i_end, j_end):
             elif (i_end<i_start and j_end>j_start):      #on the lowleft of end
                 d2 = [(-2, 1),(0, 2)]                    #UR ,R
             elif (i_end>i_start and j_end>j_start):     #on the upleft of end
-                d2 = [((2, 1),(0, 2))]                    #R, LR
+                d2 = [(2, 1),(0, 2)]                    #R, LR
             elif (i_end>i_start and j_end==j_start):     #on the up-straight of end
-                d2 = [(2, -1)]
+                d2 = [(2, 1)]
             elif (i_end<i_start and j_end==j_start):     #on the low-height of end
                 d2 = [(-2, -1)]
             elif (i_end==i_start and j_end<j_start):     #on the up-width of end
