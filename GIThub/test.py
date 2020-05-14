@@ -1,21 +1,14 @@
+def sockMerchant(n, ar):
+    c = set(ar)
+    countA = 0
+    b = [0 for _ in range(len(c))]
+    for i in range(len(c)):
+        b[i]+=ar.count(c[i])/2
+    for j in b:
+        if int(j)==j:
+            countA+=j
+    return countA
 n = int(input())
 
-scores = list(map(int, input().rstrip().split()))
-
-
-
-def breakingRecords(scores):
-    mintime = maxtime = 0
-    
-    minscore = maxscore = scores[0]
-    for i in range (1,len(scores)):
-        if scores[i]>maxscore:
-            maxscore=scores[i]
-            maxtime +=1
-        if scores[i]<minscore:
-            minscore = scores[i]
-            mintime +=1
-    return [maxtime,mintime]
-result = breakingRecords(scores)
-c = " ".join(map(str,result))
-print(c)
+ar = list(map(int, input().rstrip().split()))
+print(sockMerchant(n,ar))
