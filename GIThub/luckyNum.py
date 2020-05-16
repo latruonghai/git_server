@@ -1,15 +1,10 @@
-def isPrime(n):
-    for i in range(2,int(n**0.5)+1):
-        if n%i==0:
-            return False
-    return True
-n = int(input())
-dem =0
-temp = n+1
-while dem<2:
-    for i in range(temp-1,1,-1):
-        if isPrime(i):
-            temp =i
-            dem+=1
-            break
-print(temp)
+n = int (input())
+d = []
+for i in range(n):
+    m = int(input())
+    a = list(map(int,input().split()))
+    b = sum(a)/m
+    b = int(b) if int(b)==b else int(b)+1
+    d.append(b)
+for i in d:
+    print(i)
